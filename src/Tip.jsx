@@ -7,7 +7,7 @@ export const Tip = () => {
     const [submit,setSubmit] = useState();
 
     const handleInput = (e) =>{
-        setInput(e.target.value >= 1 ? e.target.value : 1);
+        setInput(e.target.value >= 1 ? e.target.value : '');
     }
 
     const handleRange = (e) => {
