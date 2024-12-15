@@ -1,7 +1,7 @@
 import React,{useState} from "react";
 
 export const Tip = () => {
-    const [input,setInput] = useState(0);
+    const [input,setInput] = useState('');
     const [percentage,setPercentage] = useState(0);
     const [people,setPeople] = useState(1);
     const [submit,setSubmit] = useState();
@@ -15,13 +15,14 @@ export const Tip = () => {
     }
 
     const handlePeople = (e) => {
-        setPeople(people>=1 ? e.target.value : 1)
+        const value = Number(e.target.value);
+        setPeople(value >= 0 ? value : 1)
     }
-
 
     const handleSubmit = (e) => {
         e.preventDefault(); 
         const tip = (Number(input) * (percentage/100)) / people ;
+        console.log(tip)
         setSubmit(tip.toFixed(2));
     }
     
@@ -44,9 +45,12 @@ export const Tip = () => {
                     <button className="btn" type="submit">Calculate</button>
                 </section>
             </form>
-            <div>
-                <p>The Tip Per Person is ${submit} </p>
-            </div>
+            { input >= 1 && percentage >= 1&& people >= 1 ?
+                <div>
+                    <p>The Tip Per Person is ${submit} </p>
+                </div>
+               : <p>Please enter all values</p> 
+            }
         </div>
         
     )
