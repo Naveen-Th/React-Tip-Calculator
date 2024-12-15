@@ -13,7 +13,6 @@ export const Tip = () => {
     const handleRange = (e) => {
         setPercentage(e.target.value);
     }
-
     const handlePeople = (e) => {
         const value = Number(e.target.value);
         setPeople(value >= 0 ? value : 1)
