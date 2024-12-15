@@ -18,11 +18,10 @@ export const Tip = () => {
         setPeople(people>=1 ? e.target.value : 1)
     }
 
-    var tip;
 
     const handleSubmit = (e) => {
         e.preventDefault(); 
-         tip = (Number(input) * (percentage/100)) / people ;
+        const tip = (Number(input) * (percentage/100)) / people ;
         setSubmit(tip.toFixed(2));
     }
     
