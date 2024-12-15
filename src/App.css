@@ -1,6 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
 
-body {
+ * {
     background: #f0f0f0;
     font-family: "DM Mono", monospace;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    flex-direction: column;
+    text-align: center;
+}
+.container p {
+    font-size: 25px;
+    font-weight: 500;
+}
+.total-bill h1 {
+    font-size: 50px;
+    font-weight: 700;
+}
+.container input[type=text] , input[type=number] {
+    font-family: "DM Mono", monospace;
+    padding: 10px;
+    text-align: end;
+    border: 2px solid rgb(130, 130, 130);
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.container .people  {
+    margin: 20px 0px;
+}
+.people .btn {
+    background: rgb(210, 210, 210);
+    margin-top: 30px;
+    padding: 15px;
+    font-size: 20px;
+    width: 150px;
+    border-radius: 10px;
 }
