@@ -34,6 +34,8 @@
     margin: 20px 0px;
 }
 .people .btn {
+    outline: none;
+    border: 2px solid rgb(130, 130, 130);
     background: rgb(210, 210, 210);
     margin-top: 30px;
     padding: 15px;
