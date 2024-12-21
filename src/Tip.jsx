@@ -7,7 +7,7 @@ export const Tip = () => {
     const [submit,setSubmit] = useState();
 
     const handleInput = (e) =>{
-        setInput(e.target.value >= 1 ? e.target.value : 1);
+        setInput(e.target.value >= 1 ? e.target.value : '');
     }
 
     const handleRange = (e) => {
@@ -15,7 +15,7 @@ export const Tip = () => {
     }
     const handlePeople = (e) => {
         const value = Number(e.target.value);
-        setPeople(value >= 0 ? value : 1)
+        setPeople(value >= 0 ? value : '')
     }
 
     const handleSubmit = (e) => {
@@ -28,11 +28,13 @@ export const Tip = () => {
     return(
         <div className="container">
             <form onSubmit={handleSubmit}>
+                
                 <section className="total-bill">
                     <h1>Tip <br></br> Calculator</h1>
                     <p>Total bill amount</p>
                     <input type="text" placeholder="0.00" value={input} onChange={handleInput}/> 
                 </section>
+
                 <section className="choose-tip">
                     <p>Choose Tip {percentage}% </p>
                     <input type="range" onChange={handleRange} />
